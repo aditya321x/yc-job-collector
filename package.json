@@ -1,0 +1,14 @@
+{
+  "name": "automated-data-collector",
+  "version": "1.0.0",
+  "description": "Automated Data Collection System",
+  "main": "scraper.js",
+  "scripts": {
+    "start": "node scraper.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "dotenv": "^17.0.0",
+    "playwright": "^1.60.0"
+  }
+}
