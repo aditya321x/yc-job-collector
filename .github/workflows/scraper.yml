@@ -24,3 +24,9 @@ jobs:
 
       - name: Run Scraper
         run: node scraper.js
+
+      - name: Upload To Supabase
+        run: node upload.js
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
