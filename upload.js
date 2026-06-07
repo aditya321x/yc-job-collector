@@ -10,14 +10,16 @@ async function uploadJobs() {
     // Remove duplicate URLs
     const uniqueJobs = [
     ...new Map(
-        jobs.map(job => [job.job_url, job])
+        jobs.map(job => [job.url, job])
     ).values()
 ];
 
     const records = uniqueJobs.map(job => ({
-    company_name: job.company_name,
-    title: job.job_title,
-    job_url: job.job_url
+    title: job.title,
+    job_url: job.url,
+    company_name: job.company,
+    job_category: job.job_category,
+    work_mode: job.work_mode
 }));
 
     console.log(`Uploading ${records.length} unique records`);
